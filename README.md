@@ -1,31 +1,66 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ** Battleship Bonanza.**
+----------------------------------------------------------
+Battleship Bonanza is a single player Python terminal game.
 
-Welcome David Garry,
+User try to sink the battleships of the computer in only ten attempts. Each battle ship is only one square on a 6 row X 6 column board.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+# *** How to play ***
+----------------------------------------------------------
+Battleship Bonanza is based on the well know strategic combat game know as "Battleships". 
 
-## Creating the Heroku app
+In this version, a single player will attempt to sink 5 battleships which the computer has placed randomly on a 6 X 6 square grid. A direct hit to a battleship is represented by an "S" on the grid, while a miss is represented by an "X". The player will have 10 attempts to sink the 5 battleships. Faliure to do so, within 10 attempts will result in the player losing the game.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# *** Features ***
+----------------------------------------------------------
+# **** Existing Features ****
+- Random battleships are placed on the board by the computer
+- The player will only know where the battleships are placed when/if they guess the correct location marked with an "S".
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- Maintains the numbers of guesses the player has left
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+- Accepts user inputs
+- Input validation and error-checking
+    - A player in unable to guess the same location twice during the same game.
+    - A Playter can only guess within a define grid
 
-## Constraints
+- Date in maintained in classes
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+# **** Future Features ****
+- Computer versus player 
+- multiple players
+- ships larger than 1X1
+- ships located both vertically and horizontally on the grid
 
------
-Happy coding!
+
+# *** Data model ***
+----------------------------------------------------------
+The data class model was used to create Battleship Bonanza using two main classes. The board is used to store the attribites of the board, i.e. the board size, row details and column details.
+The battleship class was used to store the battleship random generation and number of battleships.
+Finally the PlayGame class is used to enforce the game rules.
+
+# *** Testing ***
+----------------------------------------------------------
+The project has been manually tested via the following:
+- The code has been run through the PEP8 linter and confirmed that no issues have been found.
+
+- Given invalid inputs: string where numbers are expected, locations outside of the grid and same location twice during the same game.
+
+# *** Bugs ***
+----------------------------------------------------------
+The comments under the print_board definition on line 14 created an indentation error which i could only resolved by placing it above the def and not under the line.
+# **** Solved Bugs ****
+
+# **** Remaining bugs ****
+- No bugs remaining
+
+# **** Validator Testing ****
+- PEP8
+  - No errors were returned from PEP8online.com
+
+# *** Deployment ***
+----------------------------------------------------------
